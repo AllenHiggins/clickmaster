@@ -1,0 +1,68 @@
+.clickheader{
+  padding-top: 2em;
+  .logohead{
+    margin: 0 auto;
+    text-align: center;
+    img{
+      width: 150px;
+    }
+  }
+  h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 100;
+    font-family: 'Cinzel', serif;
+  }
+  p{
+    color: rgb(204, 204, 204);
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 75%;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    a{
+      color: rgb(204, 204, 204);
+      text-decoration: none;
+    }
+  }
+
+  ul{
+    padding-top: 1em;
+    padding-bottom: 2em;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    li{
+      display: inline;
+      padding: 5px;
+    }
+    li:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+
+  .clickheader{
+    .logohead{
+      img{
+        width: 130px;
+      }
+    }
+    h1{
+      font-size: 2.60em;
+    }
+    ul{
+      font-size: 20px;
+      li{
+        padding: 5px;
+      }
+    }
+  }
+}
+

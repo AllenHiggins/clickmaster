@@ -1,0 +1,39 @@
+<section class="con">
+  <div class="left-click-panel">
+    <div
+      id="clickslider"
+      style="width: 100vw"
+      [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+        <img
+        [src]=images[index]
+        [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+    </div>
+    <div id="close">
+      <div
+        id="controls"
+        [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+        <div (click)="closePanel()" class="closeIcons">
+          <div class="icon-to-close" *ngIf="close"><i class="fas fa-times"></i></div>
+          <div class="icon-to-open" *ngIf="!close"><i class="fas fa-bars"></i></div>
+        </div>
+        <ul id="clickArrows">
+          <li id="left" (click)="changeImgWithArrows('left')" class="closeIcons"><</li>
+          <li id="right" (click)="changeImgWithArrows('right')" class="closeIcons">></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    class="right-click-panel"
+    [ngClass]="{'panel-out': close === false, 'panel-back': close === true}">
+    <div
+      id="close2"
+      class="closeIcons"
+      (click)="closePanel()"><i class="fas fa-times"></i></div>
+    <app-headerclick></app-headerclick>
+    <div class="clickPhotoList">
+      <app-photolistdisplayclick></app-photolistdisplayclick>
+    </div>
+    <app-footerclick></app-footerclick>
+  </div>
+</section>

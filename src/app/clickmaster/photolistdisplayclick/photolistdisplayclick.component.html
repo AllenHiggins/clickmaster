@@ -1,0 +1,12 @@
+<section class="clickPhotoList">
+ <ul>
+   <li
+    tabindex="1"
+    *ngFor="let thumb of thumbs; let i = index"
+    (click)="imgChoice(i)"
+    >
+     <img src={{thumb}} />
+   </li>
+ </ul>
+</section>
+
